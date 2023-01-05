@@ -5,16 +5,22 @@
  docker run exsploer/api-server-main:1.0.0
  https://hub.docker.com/repository/docker/exsploer/api-server-main - ссылка на образ
 ```
-2) Если на компьютере не скачан докер, то скачать этот репозиторий и запустить сервер командой в терминале
-Ссылка на документация к API: https://app.swaggerhub.com/apis/SZABLIKOV853/Test/1.0.0#/
+2) Если на компьютере не установлен докер, то скачайте этот репозиторий и запустить сервер командой в терминале
+
 ```
  git clone https://github.com/Progerrs/Api_Server_TS.git
  npm run start:dev
 ```
-____
-После запуска необходимо запустить frontend(Angular) <br />
+Что бы перейти на страницу докумантаций нужно прописать в адрестной строке такой путь: 
 ```
-Сылка на frontend: https://github.com/Progerrs/fron
+ http://localhost:7000/api/docs#/
+```
+У вас должна отобразиться страница документаци
+![Alt text](/MainPage.png?raw=true "Main page")
+____
+После запуска необходимо запустить frontend(Angular) <br/>
+ ```
+Сылка на frontend: https://github.com/Progerrs/Frontend
 ```
 После установки фронтенда и запуска Api сервера необходимо запустить Agnlur <br />
 Для этого введите такую команду в консоль
