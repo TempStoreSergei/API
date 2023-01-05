@@ -16,7 +16,7 @@
  http://localhost:7000/api/docs#/
 ```
 У вас должна отобразиться страница документаци
-![Alt text](/MainPage.png?raw=true "Main page")
+![Alt text](/Swagger.png?raw=true "Swagger")
 ____
 После запуска необходимо запустить frontend(Angular) <br/>
  ```
