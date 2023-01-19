@@ -1,10 +1,11 @@
 import {Column, DataType, Model, Table} from "sequelize-typescript";
 import {ApiProperty} from "@nestjs/swagger";
-interface UserCreate{
+interface UserCreate {
     FirstName: string
     LastName:  string
     BirthDay:  Date
     Gender:    boolean
+    PathToImage: string
 }
 @Table({tableName: 'Users'})
 export class User extends Model<User, UserCreate> {
@@ -23,4 +24,7 @@ export class User extends Model<User, UserCreate> {
     @ApiProperty({example: 'Male', description: 'Пол'})
     @Column({type: DataType.BOOLEAN, allowNull: false})
     Gender:    boolean
+    @ApiProperty({example: 'mypikche.png', description: 'Путь к файлу'})
+    @Column({type: DataType.STRING, allowNull: true})
+    PathToImage:  string
 }

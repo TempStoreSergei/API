@@ -21,6 +21,11 @@ export class UserService {
         return age
     }
 
+    getImage(pathToFile: string): string {
+
+        return ''
+    }
+
     async createUser(dto: CreateUserDto) {
         const user = await this.userRepository.create(dto)
         return user
