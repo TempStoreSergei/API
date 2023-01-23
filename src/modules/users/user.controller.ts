@@ -5,12 +5,11 @@ import {DeleteUserDto} from "./dto/delete-user.dto";
 import {ApiOperation, ApiResponse, ApiTags} from "@nestjs/swagger";
 import {User} from "./user.model";
 import {UpdateUserDto} from "./dto/update-user.dto";
-import {ValidationPipe} from "../../pipes/validation.pipe";
+import {ValidationPipe} from "../pipes/validation.pipe";
 @ApiTags('User')
 @Controller('user')
 export class UserController {
-    constructor(private userServic: UserService) {
-    }
+    constructor(private userServic: UserService) {}
     @ApiOperation({summary: 'Создание пользователя'})
     @ApiResponse({status: 200, type: User})
     @Post()

@@ -1,10 +1,11 @@
 import {Module} from "@nestjs/common";
 import {SequelizeModule} from "@nestjs/sequelize";
-import {UserModule} from "./users/user/user.module";
+import {UserModule} from "./modules/users/user.module";
 import {ConfigModule} from "@nestjs/config";
 import * as process from "process";
-import {User} from "./users/user/user.model";
-import {FilesModule} from "./imagens/imagen.module";
+import {User} from "./modules/users/user.model";
+import {FilesModule} from "./modules/imagens/imagen.module";
+import {MulterModule} from "@nestjs/platform-express";
 
 @Module({
     controllers: [],
@@ -22,7 +23,10 @@ import {FilesModule} from "./imagens/imagen.module";
             autoLoadModels: true
         }),
         UserModule,
-        FilesModule
+        MulterModule.register({
+            dest: './image',
+        }),
+        FilesModule,
     ],
 })
 export class AppModule{}
